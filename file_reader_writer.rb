@@ -1,4 +1,4 @@
-require_relative 'time_adjuster'
+require './time_adjuster'
 
 class FileReaderWriter
   def initialize(file_to_read, direction, interval)

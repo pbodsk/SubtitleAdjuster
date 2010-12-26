@@ -1,4 +1,4 @@
-require_relative 'time_slice'
+require './time_slice'
 
 class TimeAdjuster
   def initialize(input_line)
@@ -14,17 +14,18 @@ class TimeAdjuster
     "#{@warpedStart} --> #{@warpedEnd}"
   end
   
-  def shift(target, direction, interval)
+private 
+
+  def shift(target, direction, interval)  
     if "+".eql?(direction)
       return forwards(target, interval)
     elsif "-".eql?(direction)
       return backwards(target, interval)
     else
         puts "illegal value for direction, legal values are '+' and '-'"
+      end
     end
-  end
-  
-private 
+
   def forwards(target, interval)
     target.miliseconds += interval.miliseconds
     if target.miliseconds > 999

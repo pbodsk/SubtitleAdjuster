@@ -1,11 +1,11 @@
 class TimeSlice
   attr_accessor :hours, :minutes, :seconds, :miliseconds
-  def initialize(inputLine)
+  def initialize(input_line)
     #00:21:29,621
-    @hours = inputLine[0,2].to_i
-    @minutes = inputLine[3,2].to_i
-    @seconds = inputLine[6,2].to_i
-    @miliseconds = inputLine[9,3].to_i
+    @hours = input_line[0,2].to_i
+    @minutes = input_line[3,2].to_i
+    @seconds = input_line[6,2].to_i
+    @miliseconds = input_line[9,3].to_i
   end
     
   def to_s

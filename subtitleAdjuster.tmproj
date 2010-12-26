@@ -3,58 +3,60 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>warper.rb</string>
+	<string>time_adjuster.rb</string>
 	<key>documents</key>
 	<array>
 		<dict>
 			<key>filename</key>
 			<string>time_slice.rb</string>
 			<key>lastUsed</key>
-			<date>2010-12-21T20:44:21Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>warper.rb</string>
-			<key>lastUsed</key>
-			<date>2010-12-23T19:49:06Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2010-12-23T20:24:32Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>adjust_time.rb</string>
 			<key>lastUsed</key>
-			<date>2010-12-23T19:20:10Z</date>
+			<date>2010-12-23T20:21:36Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
-			<string>file_reader.rb</string>
+			<string>file_reader_writer.rb</string>
 			<key>lastUsed</key>
-			<date>2010-12-23T19:19:50Z</date>
+			<date>2010-12-23T20:21:38Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
-			<string>original inputFile.srt</string>
+			<string>time_adjuster.rb</string>
 			<key>lastUsed</key>
-			<date>2010-12-23T19:22:53Z</date>
+			<date>2010-12-23T20:28:02Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
-			<string>inputFile.srt</string>
+			<string>../SubtitleAdjuster/README</string>
 			<key>lastUsed</key>
-			<date>2010-12-23T19:49:06Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>warpedinputFile.srt</string>
-			<key>lastUsed</key>
-			<date>2010-12-23T19:27:00Z</date>
+			<date>2010-12-23T20:28:02Z</date>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
 	<integer>200</integer>
 	<key>metaData</key>
 	<dict>
+		<key>../SubtitleAdjuster/README</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>30</integer>
+				<key>line</key>
+				<integer>1</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>adjust_time.rb</key>
 		<dict>
 			<key>caret</key>
@@ -67,60 +69,30 @@
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>10</integer>
+			<integer>0</integer>
 		</dict>
-		<key>file_reader.rb</key>
+		<key>file_reader_writer.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>34</integer>
+				<integer>38</integer>
 				<key>line</key>
-				<integer>10</integer>
+				<integer>15</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>inputFile.srt</key>
+		<key>time_adjuster.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>12</integer>
+				<integer>18</integer>
 				<key>line</key>
-				<integer>1</integer>
-			</dict>
-			<key>columnSelection</key>
-			<false/>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>1</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>12</integer>
-				<key>line</key>
-				<integer>1</integer>
-			</dict>
-		</dict>
-		<key>original inputFile.srt</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>29</integer>
-				<key>line</key>
-				<integer>1361</integer>
+				<integer>2</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -141,44 +113,14 @@
 			<key>firstVisibleLine</key>
 			<integer>13</integer>
 		</dict>
-		<key>warpedinputFile.srt</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>1</integer>
-				<key>line</key>
-				<integer>0</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>warper.rb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>4</integer>
-				<key>line</key>
-				<integer>52</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>40</integer>
-		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>file_reader.rb</string>
 		<string>adjust_time.rb</string>
-		<string>warpedinputFile.srt</string>
-		<string>inputFile.srt</string>
-		<string>warper.rb</string>
+		<string>file_reader_writer.rb</string>
+		<string>time_adjuster.rb</string>
 		<string>time_slice.rb</string>
-		<string>original inputFile.srt</string>
+		<string>../SubtitleAdjuster/README</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>

@@ -1,4 +1,4 @@
-require_relative "file_reader_writer"
+require './file_reader_writer'
 direction = nil
 fileName = nil
 interval = nil
