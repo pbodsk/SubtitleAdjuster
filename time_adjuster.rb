@@ -1,9 +1,12 @@
 require './time_slice'
 
 class TimeAdjuster
+  attr_reader :start, :end
+  
   def initialize(input_line)
     @start = TimeSlice.new(input_line[/^\d{2}:\d{2}:\d{2},\d{3}/])
-    @end = TimeSlice.new(input_line[-14,12])
+    start_pos = /-->/ =~ input_line
+    @end = TimeSlice.new(input_line[start_pos + 4, 12])
   end
   
   def warp(direction, interval)

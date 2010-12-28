@@ -19,7 +19,7 @@ class TimeSlice
   private 
     def parse_miliseconds
       if @miliseconds < 0
-        @miliseconds = "000"
+        raise "trying to subtract a timecode larger than this one"
       elsif @miliseconds < 10
         @miliseconds = "00" + @miliseconds.to_s
       elsif @miliseconds < 100
@@ -29,7 +29,7 @@ class TimeSlice
     
     def parse_seconds
       if @seconds < 0 || @seconds > 59
-        @seconds = "00"
+        raise "trying to subtract a timecode larger than this one"
       elsif @seconds < 10
         @seconds = "0" + @seconds.to_s
       end
@@ -37,7 +37,7 @@ class TimeSlice
       
     def parse_minutes
       if @minutes < 0 || @minutes > 59
-        @minutes = "00"
+        raise "trying to subtract a timecode larger than this one"
       elsif @minutes < 10
         @minutes = "0" + @minutes.to_s
       end
@@ -45,7 +45,7 @@ class TimeSlice
     
     def parse_hours
       if @hours < 0 || @hours > 59
-        @hours = "00"
+        raise "trying to subtract a timecode larger than this one"
       elsif @hours < 10
         @hours = "0" + @hours.to_s
       end
