@@ -1,6 +1,9 @@
 require './time_slice'
 
 class TimeAdjuster
+  MILISECONDS_IN_A_SECOND = 999
+  SECONDS_IN_A_MINUTE = 59
+  MINUTES_IN_AN_HOUR = 59
   attr_reader :start, :end
   
   def initialize(input_line)
@@ -46,12 +49,12 @@ private
   end
   
   def to_s(miliseconds_value)
-    hours = miliseconds_value.div(60 * 60 * 999).to_s
-    remaining = miliseconds_value.modulo(60 * 60 * 999)
-    minutes = remaining.div(60 * 999).to_s
-    remaining = remaining.modulo(60*999)
-    seconds = remaining.div(999).to_s
-    miliseconds = remaining.modulo(999).to_s
+    hours = miliseconds_value.div(MINUTES_IN_AN_HOUR * SECONDS_IN_A_MINUTE * MILISECONDS_IN_A_SECOND).to_s
+    remaining = miliseconds_value.modulo(MINUTES_IN_AN_HOUR * SECONDS_IN_A_MINUTE * MILISECONDS_IN_A_SECOND)
+    minutes = remaining.div(SECONDS_IN_A_MINUTE * MILISECONDS_IN_A_SECOND).to_s
+    remaining = remaining.modulo(SECONDS_IN_A_MINUTE * MILISECONDS_IN_A_SECOND)
+    seconds = remaining.div(MILISECONDS_IN_A_SECOND).to_s
+    miliseconds = remaining.modulo(MILISECONDS_IN_A_SECOND).to_s
     hours = "0" + hours if hours.length == 1
     minutes = "0" + minutes if minutes.length ==1
     seconds = "0" + seconds if seconds.length == 1
