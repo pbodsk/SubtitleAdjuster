@@ -8,18 +8,16 @@ class FileReaderWriter
   end
 
   def execute
-    outputFile = File.new("warped_" + @file, "w+")
+    output_file = File.new("warped_" + @file, "w+")
     File.open(@file, "r+") do |file|
       while line = file.gets 
-        if line =~ /^\d{2}:\d{2}:\d{2},\d{3}\D*\d{2}:\d{2}:\d{2},\d{3}/
-          timeAdjuster = TimeAdjuster.new(line)
-          outputFile.puts timeAdjuster.warp(@direction, @interval)
-        else
-          outputFile.puts line
-        end
+        output_file.puts(line.gsub(/^\d{2}:\d{2}:\d{2},\d{3}\D*\d{2}:\d{2}:\d{2},\d{3}/) do
+          time_adjuster = TimeAdjuster.new(line)
+          time_adjuster.warp(@direction, @interval)
+        end )        
       end
     end
-  end
+  end  
 end
 
 

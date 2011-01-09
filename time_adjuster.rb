@@ -4,9 +4,9 @@ class TimeAdjuster
   attr_reader :start, :end
   
   def initialize(input_line)
-    @start = TimeSlice.new(input_line[/^\d{2}:\d{2}:\d{2},\d{3}/])
-    start_pos = /-->/ =~ input_line
-    @end = TimeSlice.new(input_line[start_pos + 4, 12])
+    time_slice_start, time_slice_end = input_line.chomp.split(/\s-->\s/)
+    @start = TimeSlice.new(time_slice_start)
+    @end = TimeSlice.new(time_slice_end)
   end
   
   def warp(direction, interval)
@@ -30,50 +30,38 @@ private
     end
 
   def forwards(target, interval)
-    target.miliseconds += interval.miliseconds
-    if target.miliseconds > 999
-      target.seconds += 1
-      target.miliseconds -= 999
-    end
-    
-    target.seconds += interval.seconds
-    if target.seconds > 59
-      target.minutes += 1
-      target.seconds -= 59
-    end
-    
-    target.minutes += interval.minutes
-    if target.minutes > 59
-      target.hours += 1
-      target.minutes -= 59
-    end
-    
-    target.hours += interval.hours
-    return target
+    target_in_miliseconds = target.to_miliseconds
+    interval_in_miliseconds = interval.to_miliseconds
+    to_s(target_in_miliseconds + interval_in_miliseconds)
   end
   
   def backwards(target, interval)
     #00:00:03,937, 00:00:58,000
   
-    target.miliseconds -= interval.miliseconds
-    if target.miliseconds < 0
-        target.seconds -= 1
-        target.miliseconds = 999 + target.miliseconds
+    target_in_miliseconds = target.to_miliseconds
+    interval_in_miliseconds = interval.to_miliseconds
+    val = target_in_miliseconds - interval_in_miliseconds
+    raise "trying to subtract a timecode larger than this one" if val < 0
+    to_s(val)
+  end
+  
+  def to_s(miliseconds_value)
+    hours = miliseconds_value.div(60 * 60 * 999).to_s
+    remaining = miliseconds_value.modulo(60 * 60 * 999)
+    minutes = remaining.div(60 * 999).to_s
+    remaining = remaining.modulo(60*999)
+    seconds = remaining.div(999).to_s
+    miliseconds = remaining.modulo(999).to_s
+    hours = "0" + hours if hours.length == 1
+    minutes = "0" + minutes if minutes.length ==1
+    seconds = "0" + seconds if seconds.length == 1
+    if miliseconds.length == 1
+      miliseconds = "00" + miliseconds
     end
     
-    target.seconds -= interval.seconds
-    if target.seconds < 0
-        target.minutes -= 1
-        target.seconds = 59 + target.seconds
+    if miliseconds.length == 2
+      miliseconds = "0" + miliseconds
     end
-    
-    target.minutes -= interval.minutes
-    if target.minutes < 0
-      target.hours -= 1
-      target.minutes = 59 + target.seconds
-    end
-    
-    target.hours -= interval.hours
-    return target
+    return "#{hours}:#{minutes}:#{seconds},#{miliseconds}"
   end
 end
