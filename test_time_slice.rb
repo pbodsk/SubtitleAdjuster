@@ -18,7 +18,7 @@ class TestTimeSlice < Test::Unit::TestCase
   
   def test_can_return_miliseconds
       string_value = "01:02:03,456"
-      miliseconds_value = 3723456
+      miliseconds_value = 3719733
       time_slice = TimeSlice.new(string_value)
       assert_equal(time_slice.to_miliseconds, miliseconds_value)
   end

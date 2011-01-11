@@ -3,48 +3,50 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>../SubtitleAdjuster/warped_inputFile.srt</string>
+	<string>time_slice.rb</string>
 	<key>documents</key>
 	<array>
 		<dict>
 			<key>filename</key>
 			<string>time_slice.rb</string>
 			<key>lastUsed</key>
-			<date>2010-12-28T18:56:13Z</date>
+			<date>2011-01-09T17:04:41Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>adjust_time.rb</string>
 			<key>lastUsed</key>
-			<date>2010-12-26T12:32:35Z</date>
+			<date>2011-01-09T16:43:26Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>file_reader_writer.rb</string>
 			<key>lastUsed</key>
-			<date>2010-12-26T13:07:11Z</date>
+			<date>2011-01-09T16:44:36Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>test_time_slice.rb</string>
 			<key>lastUsed</key>
-			<date>2010-12-26T13:16:48Z</date>
+			<date>2011-01-09T16:20:54Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>test_time_adjuster.rb</string>
 			<key>lastUsed</key>
-			<date>2010-12-28T19:38:04Z</date>
+			<date>2011-01-09T16:51:15Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>time_adjuster.rb</string>
 			<key>lastUsed</key>
-			<date>2010-12-28T19:17:47Z</date>
+			<date>2011-01-09T16:57:56Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
-			<string>../SubtitleAdjuster/README</string>
+			<string>README</string>
 			<key>lastUsed</key>
 			<date>2010-12-23T20:28:02Z</date>
 		</dict>
@@ -52,22 +54,40 @@
 			<key>filename</key>
 			<string>../inputFile.srt</string>
 			<key>lastUsed</key>
-			<date>2010-12-28T19:07:21Z</date>
+			<date>2011-01-09T16:43:19Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
-			<string>../SubtitleAdjuster/warped_inputFile.srt</string>
+			<string>warped_inputFile.srt</string>
 			<key>lastUsed</key>
-			<date>2010-12-28T19:38:04Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2011-01-09T16:59:16Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>inputFile.srt</string>
+			<key>lastUsed</key>
+			<date>2011-01-09T17:04:41Z</date>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
 	<integer>200</integer>
 	<key>metaData</key>
 	<dict>
-		<key>../SubtitleAdjuster/README</key>
+		<key>../inputFile.srt</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>README</key>
 		<dict>
 			<key>caret</key>
 			<dict>
@@ -80,50 +100,6 @@
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
-		</dict>
-		<key>../SubtitleAdjuster/warped_inputFile.srt</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>0</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>4</integer>
-		</dict>
-		<key>../inputFile.srt</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>1</integer>
-			</dict>
-			<key>columnSelection</key>
-			<false/>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>29</integer>
-				<key>line</key>
-				<integer>1</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>1</integer>
-			</dict>
 		</dict>
 		<key>adjust_time.rb</key>
 		<dict>
@@ -144,7 +120,21 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>11</integer>
+				<integer>10</integer>
+				<key>line</key>
+				<integer>15</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>inputFile.srt</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
 				<key>line</key>
 				<integer>0</integer>
 			</dict>
@@ -158,49 +148,79 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>37</integer>
+				<integer>1</integer>
 				<key>line</key>
-				<integer>43</integer>
+				<integer>44</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>16</integer>
+			<integer>17</integer>
 		</dict>
 		<key>test_time_slice.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>33</integer>
 				<key>line</key>
-				<integer>0</integer>
+				<integer>20</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>26</integer>
+				<key>line</key>
+				<integer>20</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>33</integer>
+				<key>line</key>
+				<integer>20</integer>
+			</dict>
 		</dict>
 		<key>time_adjuster.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>55</integer>
+				<integer>25</integer>
 				<key>line</key>
-				<integer>8</integer>
+				<integer>3</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>1</integer>
+			<integer>39</integer>
 		</dict>
 		<key>time_slice.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>15</integer>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>8</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>warped_inputFile.srt</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
 				<key>line</key>
 				<integer>0</integer>
 			</dict>
@@ -214,13 +234,14 @@
 	<array>
 		<string>adjust_time.rb</string>
 		<string>file_reader_writer.rb</string>
+		<string>warped_inputFile.srt</string>
+		<string>inputFile.srt</string>
 		<string>time_adjuster.rb</string>
 		<string>../inputFile.srt</string>
 		<string>test_time_adjuster.rb</string>
-		<string>../SubtitleAdjuster/warped_inputFile.srt</string>
 		<string>test_time_slice.rb</string>
 		<string>time_slice.rb</string>
-		<string>../SubtitleAdjuster/README</string>
+		<string>README</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>

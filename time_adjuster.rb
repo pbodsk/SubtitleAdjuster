@@ -2,8 +2,8 @@ require './time_slice'
 
 class TimeAdjuster
   MILISECONDS_IN_A_SECOND = 999
-  SECONDS_IN_A_MINUTE = 59
-  MINUTES_IN_AN_HOUR = 59
+  SECONDS_IN_A_MINUTE = 60
+  MINUTES_IN_AN_HOUR = 60
   attr_reader :start, :end
   
   def initialize(input_line)

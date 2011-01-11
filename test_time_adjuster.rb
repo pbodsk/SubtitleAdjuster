@@ -27,22 +27,34 @@ class TestTimeAdjuster < Test::Unit::TestCase
   end
   
   def test_will_add_to_seconds_if_addition_of_miliseconds_results_in_miliseconds_exceeding_999
-    adjuster = TimeAdjuster.new("00:00:03,750 --> 00:00:07,450")
+    adjuster = TimeAdjuster.new("00:00:00,750 --> 00:00:01,450")
     line = adjuster.warp( "+", "00:00:00,250")
-    assert_equal("00:00:04,001 --> 00:00:07,700", line)
+    assert_equal("00:00:01,001 --> 00:00:01,700", line)
   end
   
   def test_will_add_to_minutes_if_addition_of_seconds_results_in_seconds_exceeding_60
-    adjuster = TimeAdjuster.new("00:00:03,750 --> 00:00:07,450")
+    adjuster = TimeAdjuster.new("00:00:03,000 --> 00:00:07,450")
     line = adjuster.warp( "+", "00:00:57,000")
-    assert_equal("00:01:01,750 --> 00:01:05,450", line)
+    assert_equal("00:01:00,000 --> 00:01:04,450", line)
   end
   
-#  def test_will_add_to_hours_if_addition_of_minutes_results_in_minutes_exceeding_60
-#    adjuster = TimeAdjuster.new("00:05:01,750 --> 00:05:02,450")
-#    line = adjuster.warp( "+", "00:55:00,000")
-#    assert_equal("01:01:01,750 --> 01:01:02,450", line)    
-#  end
+  def test_will_add_to_minutes_if_addition_of_seconds_results_in_seconds_exceeding_60_test_2
+    adjuster = TimeAdjuster.new("00:00:03,010 --> 00:00:07,450")
+    line = adjuster.warp( "+", "00:00:58,000")
+    assert_equal("00:01:01,010 --> 00:01:05,450", line)
+  end
+  
+  def test_will_add_to_hours_if_addition_of_minutes_results_in_minutes_exceeding_60
+    adjuster = TimeAdjuster.new("00:05:01,750 --> 00:05:02,450")
+    line = adjuster.warp( "+", "00:55:00,000")
+    assert_equal("01:00:01,750 --> 01:00:02,450", line)    
+  end
+  
+  def test_will_add_to_hours_if_addition_of_minutes_results_in_minutes_exceeding_60_test_2
+    adjuster = TimeAdjuster.new("00:05:00,000 --> 00:06:00,000")
+    line = adjuster.warp( "+", "00:56:00,000")
+    assert_equal("01:01:00,000 --> 01:02:00,000", line)
+  end
 
 
 end
