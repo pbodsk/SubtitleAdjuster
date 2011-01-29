@@ -3,16 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>time_slice.rb</string>
+	<string>file_reader_writer.rb</string>
 	<key>documents</key>
 	<array>
 		<dict>
 			<key>filename</key>
 			<string>time_slice.rb</string>
 			<key>lastUsed</key>
-			<date>2011-01-09T17:04:41Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2011-01-11T19:21:25Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -24,25 +22,33 @@
 			<key>filename</key>
 			<string>file_reader_writer.rb</string>
 			<key>lastUsed</key>
-			<date>2011-01-09T16:44:36Z</date>
+			<date>2011-01-16T18:31:57Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>test_time_slice.rb</string>
 			<key>lastUsed</key>
-			<date>2011-01-09T16:20:54Z</date>
+			<date>2011-01-13T19:45:32Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>allTests.rb</string>
+			<key>lastUsed</key>
+			<date>2011-01-11T19:03:21Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>test_time_adjuster.rb</string>
 			<key>lastUsed</key>
-			<date>2011-01-09T16:51:15Z</date>
+			<date>2011-01-13T19:45:30Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>time_adjuster.rb</string>
 			<key>lastUsed</key>
-			<date>2011-01-09T16:57:56Z</date>
+			<date>2011-01-11T19:21:49Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -115,6 +121,20 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>allTests.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>11</integer>
+				<key>line</key>
+				<integer>2</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>file_reader_writer.rb</key>
 		<dict>
 			<key>caret</key>
@@ -148,14 +168,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>1</integer>
+				<integer>43</integer>
 				<key>line</key>
-				<integer>44</integer>
+				<integer>43</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>17</integer>
+			<integer>21</integer>
 		</dict>
 		<key>test_time_slice.rb</key>
 		<dict>
@@ -166,49 +186,33 @@
 				<key>line</key>
 				<integer>20</integer>
 			</dict>
-			<key>columnSelection</key>
-			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>26</integer>
-				<key>line</key>
-				<integer>20</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>33</integer>
-				<key>line</key>
-				<integer>20</integer>
-			</dict>
 		</dict>
 		<key>time_adjuster.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>25</integer>
+				<integer>31</integer>
 				<key>line</key>
 				<integer>3</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>39</integer>
+			<integer>0</integer>
 		</dict>
 		<key>time_slice.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>31</integer>
 				<key>line</key>
-				<integer>8</integer>
+				<integer>1</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -234,11 +238,10 @@
 	<array>
 		<string>adjust_time.rb</string>
 		<string>file_reader_writer.rb</string>
-		<string>warped_inputFile.srt</string>
-		<string>inputFile.srt</string>
 		<string>time_adjuster.rb</string>
 		<string>../inputFile.srt</string>
 		<string>test_time_adjuster.rb</string>
+		<string>allTests.rb</string>
 		<string>test_time_slice.rb</string>
 		<string>time_slice.rb</string>
 		<string>README</string>
