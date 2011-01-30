@@ -1,0 +1,10 @@
+#! /Users/peter/.rvm/rubies/ruby-1.9.2-p0/bin/ruby
+require 'subsync/options_parser'
+require 'subsync/file_reader_writer'
+
+opts = SubSync::OptionsParser.new(ARGV)
+puts "we're ready"
+puts "warp..."
+file_reader_writer = SubSync::FileReaderWriter.new(opts.file_name, opts.direction, opts.interval)
+file_reader_writer.execute()
+puts "...OK done, your file is now adjusted and can be found as warped_#{opts.file_name}"
