@@ -2,8 +2,13 @@
 require 'subsync/options_parser'
 require 'subsync/file_reader_writer'
 
-opts = SubSync::OptionsParser.new(ARGV)
-puts "Everything looks fine, transforming subtitlefile..."
-file_reader_writer = SubSync::FileReaderWriter.new(opts.file_name, opts.direction, opts.interval)
-file_reader_writer.execute()
-puts "...OK done, your file is now adjusted and can be found as warped_#{opts.file_name}"
+begin
+	opts = SubSync::OptionsParser.new(ARGV)
+	puts "Everything looks fine, transforming subtitlefile..."
+	file_reader_writer = SubSync::FileReaderWriter.new(opts.file_name, opts.direction, opts.interval)
+	file_reader_writer.execute()
+	puts "...OK done, your file is now adjusted and can be found as warped_#{opts.file_name}"
+rescue RuntimeError => e
+	STDERR.puts "ERROR! #{e.message}"
+	exit(-1)
+end

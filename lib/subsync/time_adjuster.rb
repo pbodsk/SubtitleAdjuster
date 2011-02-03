@@ -1,10 +1,9 @@
 require_relative 'time_slice'
+require_relative 'time_utils'
 
 module SubSync
   class TimeAdjuster
-    MILISECONDS_IN_A_SECOND = 999
-    SECONDS_IN_A_MINUTE = 60
-    MINUTES_IN_AN_HOUR = 60
+    include SubSync::TimeUtils
     attr_reader :start, :end
   
     def initialize(input_line)
@@ -48,22 +47,7 @@ private
     end
   
     def to_s(miliseconds_value)
-      hours = miliseconds_value.div(MINUTES_IN_AN_HOUR * SECONDS_IN_A_MINUTE * MILISECONDS_IN_A_SECOND).to_s
-      remaining = miliseconds_value.modulo(MINUTES_IN_AN_HOUR * SECONDS_IN_A_MINUTE * MILISECONDS_IN_A_SECOND)
-      minutes = remaining.div(SECONDS_IN_A_MINUTE * MILISECONDS_IN_A_SECOND).to_s
-      remaining = remaining.modulo(SECONDS_IN_A_MINUTE * MILISECONDS_IN_A_SECOND)
-      seconds = remaining.div(MILISECONDS_IN_A_SECOND).to_s
-      miliseconds = remaining.modulo(MILISECONDS_IN_A_SECOND).to_s
-      hours = "0" + hours if hours.length == 1
-      minutes = "0" + minutes if minutes.length ==1
-      seconds = "0" + seconds if seconds.length == 1
-      if miliseconds.length == 1
-        miliseconds = "00" + miliseconds
-      end
-    
-      if miliseconds.length == 2
-        miliseconds = "0" + miliseconds
-      end
+      hours, minutes, seconds, miliseconds = split_to_string_hours_minutes_seconds_and_miliseconds(miliseconds_value)
       return "#{hours}:#{minutes}:#{seconds},#{miliseconds}"
     end
   end

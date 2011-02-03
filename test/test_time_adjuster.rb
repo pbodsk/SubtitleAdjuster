@@ -43,6 +43,13 @@ class TestTimeAdjuster < Test::Unit::TestCase
     line = adjuster.warp( "+", "00:00:58,000")
     assert_equal("00:01:01,010 --> 00:01:05,450", line)
   end
+
+  def test_will_add_to_minutes_if_addition_of_seconds_results_in_seconds_exceeding_60_test_3
+    adjuster = SubSync::TimeAdjuster.new("00:10:00,010 --> 00:15:00,450")
+    line = adjuster.warp( "+", "00:10:00,000")
+    assert_equal("00:20:00,010 --> 00:25:00,450", line)
+  end
+
   
   def test_will_add_to_hours_if_addition_of_minutes_results_in_minutes_exceeding_60
     adjuster = SubSync::TimeAdjuster.new("00:05:01,750 --> 00:05:02,450")
