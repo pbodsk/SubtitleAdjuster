@@ -3,16 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>Rakefile</string>
+	<string>lib/subsync/time_adjuster.rb</string>
 	<key>documents</key>
 	<array>
 		<dict>
 			<key>filename</key>
 			<string>Rakefile</string>
 			<key>lastUsed</key>
-			<date>2011-02-01T19:50:43Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2011-02-03T20:19:11Z</date>
 		</dict>
 		<dict>
 			<key>expanded</key>
@@ -72,9 +70,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>28</integer>
+				<integer>34</integer>
 				<key>line</key>
-				<integer>7</integer>
+				<integer>11</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -114,23 +112,53 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>26</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>51</integer>
+				<integer>50</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>39</integer>
+			<integer>23</integer>
 		</dict>
 		<key>lib/subsync/time_slice.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>30</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>7</integer>
+				<integer>0</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>29</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+		</dict>
+		<key>lib/subsync/time_utils.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>34</integer>
+				<key>line</key>
+				<integer>15</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -170,30 +198,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>67</integer>
+				<integer>43</integer>
 				<key>line</key>
-				<integer>25</integer>
+				<integer>49</integer>
 			</dict>
-			<key>columnSelection</key>
-			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>7</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>4</integer>
-				<key>line</key>
-				<integer>25</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>67</integer>
-				<key>line</key>
-				<integer>25</integer>
-			</dict>
+			<integer>34</integer>
 		</dict>
 		<key>test/test_time_slice.rb</key>
 		<dict>
@@ -231,6 +243,7 @@
 		<string>lib/subsync/file_reader_writer.rb</string>
 		<string>lib/subsync/time_adjuster.rb</string>
 		<string>lib/subsync/time_slice.rb</string>
+		<string>lib/subsync/time_utils.rb</string>
 		<string>test/test_time_adjuster.rb</string>
 		<string>test/test_time_slice.rb</string>
 		<string>test/test_options_parser.rb</string>

@@ -8,21 +8,18 @@ module SubSync
       hours, remaining = miliseconds_value.divmod(MINUTES_IN_AN_HOUR * SECONDS_IN_A_MINUTE * MILISECONDS_IN_A_SECOND)
       minutes, remaining = remaining.divmod(SECONDS_IN_A_MINUTE * MILISECONDS_IN_A_SECOND)
       seconds, miliseconds = remaining.divmod(MILISECONDS_IN_A_SECOND)
-      hours = see_if_padding_zero_is_needed(hours.to_s)
-      minutes = see_if_padding_zero_is_needed(minutes.to_s)
-      seconds = see_if_padding_zero_is_needed(seconds.to_s)
-      miliseconds = see_if_padding_zero_is_needed(miliseconds.to_s)
-
-      #extra check for miliseconds
-      if miliseconds.length == 2
-        miliseconds = "0" + miliseconds
-      end
-      [hours, minutes, seconds, miliseconds]
+      
+      format_values(hours.to_s, minutes.to_s, seconds.to_s, miliseconds.to_s)
     end
- 
-    def see_if_padding_zero_is_needed(value)
-      value = "0" + value if value.length == 1
-      value
+    
+    def format_values(hours_string, minutes_string, seconds_string, miliseconds_string)
+      return_array = [hours_string, minutes_string, seconds_string, miliseconds_string].map do |i|
+        i.length == 1 ? "0" + i : i
+      end
+      if return_array[3].length == 2
+        return_array[3].insert(0, "0")
+      end
+      return_array
     end
   end
 end
